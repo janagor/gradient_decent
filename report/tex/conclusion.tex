@@ -1,0 +1,8 @@
+    \section{Wnioski}
+	Udało się przetestować wszystkie solwery.
+	
+	Zyski z rozwiązania nieoptymalnego potrafią być większe niż w przypadku rozwiązania optymalnego. W problemie plecakowym metoda heurystyczna pozwala na znaczące zmniejszenie czasu obliczeń kosztem uzyskania rozwiązania potencjalnie nieoptymalnego, różniącego się jednak od niego o stosunkowo małą wartość. 
+	
+	Zaletą algorytmu największego wzrostu jest fakt, że jesteśmy w stanie znaleźć często współczynnik beta taki, że w końcu uzyskamy rozwiązanie równe lub bliskie minimum funkcji. Wystarczy, żeby znaleźć wystarczająco małą tę wartość. Wada algorytmu jednak to fakt, że wartość gradientu funkcji zmienia się wraz ze zbliżaniem do minimum - gradient maleje, więc kroki są coraz krótsze i osiągnięcie minimum zajmuje bardzo dużo czasu. Bardzo dobrze było to widać w przypadku funkcji CEC2017, w których to przypadku na początku wartość współczynnika beta musiała być bardzo niska, aby algorytm zbiegał, ale po przerwaniu działania programu i nadpisaniu wartości startowej można było zwiększyć wartość współczynnika $\beta$ a kilka rzędów wielkości, co bardzo zmniejszało sumaryczny czas obliczeń. 
+	
+	Potencjalnie możnaby porównać działanie algorytmu z jego modyfikacjami: algorytmem stochastycznego największego wzrostu, algorytmem ze zmiennym krokiem lub z pędem.

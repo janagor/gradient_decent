@@ -1,0 +1,81 @@
+    
+    \section{Zadania}
+
+    \subsection{Zadanie nr 1}
+    Mamy problem plecakowy:
+    \begin{lstlisting}[language=Python]
+    m = np.array([8, 3, 5, 2]) #masa przedmiotów
+    M = np.sum(m)/2 #niech maksymalna masa plecaka 
+    # będzie równa połowie masy przedmiotów
+    p = np.array([16, 8, 9, 6]) #wartość przedmiotów
+    \end{lstlisting}
+
+    \begin{enumerate}
+      \item Znaleźć rozwiązanie optymalne przez przegląd wyczerpujący (analizując 
+        wszystkie kombinacje). 
+      \item Rozwiązać problem przy użyciu heurystyki: do plecaka pakujemy 
+        przedmioty według kolejności wynikającej ze stosunku p/m. Przeglądamy listę
+        przedmiotów do końca, chyba że plecak jest już pełen lub zostało w nim tak
+        mało miejsca, że już na pewno nic się nie zmieści. Uwaga: heurystyka to nie
+        funkcja heurystyczna. Nie używamy tu jeszcze funkcji heurystycznej i
+        algorytmu A*.
+    \end{enumerate}
+
+
+    Pytania:
+    \begin{enumerate}
+      \item Jakie rozwiązania i jaką wartość funkcji oceny uzyskano? Czy uzyskano
+        takie same rozwiązania?
+      \item Jak dużą instancję problemu (liczba przedmiotów) da się rozwiązać w 
+        około minutę metodą przeglądu wyczerpującego? Ile czasu zajmie 
+        rozwiązanie tego problemu metodą zachłanną (używając heurystyki)?
+        Odpowiednio długie wektory m i p należy wylosować, M = np.sum(m)/2.
+      \item Jak bardzo wydłuży obliczenia dodanie jeszcze jednego przedmiotu?
+      \item Jakie wnioski można wyciągnąć na podstawie wyników tego ćwiczenia?
+    \end{enumerate}
+
+    Uwagi:
+    \begin{enumerate}
+      \item Nie używać rekurencji.
+      \item Kod którego czas wykonania mierzymy nie powinien wypisywać niczego na
+        konsolę.
+      \item Nie pytałem o teoretyczną złożoność obliczeniową. Aby odpowiedzieć na
+        pytania należy wykonać stosowne eksperymenty.
+      \item Czas działania programu można zgrubnie zmierzyć komendą "time", po
+        której podaje się nazwę badanego programu. 
+    \end{enumerate}
+    \subsection{Zadanie nr 2}
+    \begin{itemize}
+    	
+      \item Zaimplementować metodę najszybszego wzrostu (minimalizacja, 
+        spodziewam się stałego współczynnika kroku, jeśli jednak ktoś chce zrobić
+        więcej i zastosować zmienny współczynnik to ma taką możliwość). Gradient
+        wyliczamy numerycznie.
+
+      \item Narysować zachowanie algorytmu (kolejne kroki algorytmu jako strzałki
+        na tle poziomic funkcji celu). Uwaga: w praktycznych zadaniach
+        optymalizacji nie da się narysować funkcji celu ponieważ zadania mają
+        wiele wymiarów (np. 100), oraz koszt wyznaczenia oceny jednego punktu
+        jest duży.
+      \item Zastosować metodę do znalezienia optimum funkcji booth w 2 wymiarach,
+        po czym do znalezienia optimum funkcji o numerach od 1 do 3 z CEC 2017 w
+        10 wymiarach (na wykresie narysować kroki w wybranych 2 wymiarach z 10).
+        Ograniczenia kostkowe przestrzeni to $[-100, 100]$. Uwzględnianie 
+        ograniczeń przez rzutowanie, np. dla $x>100$ $x=100$. Uwaga: wszystkie
+        funkcje są unimodalne. Funkcje CEC są bardzo trudne, nie należy
+        spodziewać się znalezienia optimum dla wszystkich. Należy jednak podjąć
+        próby (z różnymi ustawieniami parametru beta).
+    \end{itemize}
+
+    W sprawozdaniu należy zawrzeć wykresy uzyskane stworzonym oprogramowaniem 
+    (np. po 3 dla każdej funkcji, dla różnych punktów startowych). Należy podać 
+    wartość funkcji celu w punkcie uznanym za optimum.
+    Pytania:
+
+    \begin{enumerate}
+      \item Jak wartość parametru beta wpływa na szybkość dojścia do optimum i 
+        zachowanie algorytmu? Jakiej bety użyto dla każdej z funkcji?
+      \item Zalety/wady algorytmu?
+      \item Wnioski
+    \end{enumerate}
+

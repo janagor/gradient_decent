@@ -1,0 +1,39 @@
+
+    \section{Część teoretyczna}
+    \subsection{Dyskretny problem plecakowy}
+    Mamy do dyspozycji plecak o maksymalnej pojemności $W$ oraz zbiór $N$ 
+    elementów $\{x_1, ..., x_i, .., x_N\}$, przy czym każdy element ma określoną 
+    wartość $p_i$ oraz wage $w_i$. 
+
+    Celem jest wybranie przedmiotów o największej łącznej wartości i łącznej 
+    wadze nie większej niż $W$:
+    \[
+    max \sum_{i=1}^{n} x_i \cdot p_i 
+    \]
+    \[
+      \sum_{i=1}^{n} x_i \cdot p_i \leq W
+    \]
+    \[
+      x_i \in {0,1}
+    \]
+    Problem plecakowy jest problemem NP trudnym, jego rozwiązanie wielomianowe
+    nie jest znane. 
+
+    \subsubsection{Rozwiązanie wyczerpujące}
+    Pierwszy algorytm rozwiązujący problem plecakowy polega na przeglądzie 
+    wyczerpującym. Analizowane są w nim wszystkie kombinacje (tudzież
+    wszystkie podzbiory zbioru $N$) i wybierane jest rozwiązanie optymalne.
+    \subsubsection{Rozwiązanie przy użyciu heurystyki}
+    Drugi algorytm rozwiązujący problem korzysta z nastepującej heurystyki:
+    do plecaka pakowane są przedmioty według kolejności wynikającej ze stosunku
+    ich wartości do masy.
+
+    \subsection{Metoda najszybszego wzrostu}
+    Niech $\{\beta_t, t = 1,2,3,...\}$ będzie ciągiem liczb dodatnich, $\mathcal{X} = \mathcal{R}^d$, $J: X \rightarrow \mathbb{R}$, zaś $\{x_t, t = 1,2,3,...\}$ - ciągiem elementów $\mathcal{X}$ wyznaczanych w następującej iteracji:
+    \[
+      x_{t+1} = x_t - \beta_t \cdot \nabla J(x_t), \quad t = 1,2,...
+    \]
+    dla pewnego $x_1 \in \mathcal{X}$. Procedura ta modyfikuje wektory $x_t$ przeciwnie 
+    do kierunku wzrostu funkcji $J$.
+
+
